@@ -14,3 +14,12 @@ NCTU VRDL HW4
 * numpy
 * sicpy=1.3.1
 ## Data preprocessing
+Run generate_train.m in data file. If the process is too slow try to split your training data.
+## Training
+    python main_vdsr.py --cuda --gpus 0    
+## Generate output
+Resize the test images by 3x
+
+    python eval.py --model model/model_epoch_50.pth --imgname --cuda
+## Reference
+https://github.com/twtygqyy/pytorch-vdsr
